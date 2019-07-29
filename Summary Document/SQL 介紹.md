@@ -69,3 +69,53 @@ SELECT* //擷取所有欄位的資料
 FROM teachers; //從teachers資料表中
 ```
 
+| name | tel     | sex  | address      |
+| ---- | ------- | ---- | ------------ |
+| 曉華 | 3769999 | 女   | 高雄市三民區 |
+| 小明 | 2769999 | 男   | 高雄市左營區 |
+| 小鐘 | 1769999 | 男   | 高雄市前鎮區 |
+
+以上這些資料儲存在 Students資料表內。
+
+STUDENT_ID: NAME
+
+CLASS_ID: TEL, SEX
+
+MAILBOX: ADDRESS
+
+```MYSQL
+SELECT NAME, TEL, SEX, ADDRESS//擷取這些欄位的資料
+FROM Students//從Students資料表中
+```
+
+
+
+##### SELECT / WHERE語法
+
+* 在SELECT查詢中，透過WHERE的條件來判斷並取出所要的資料
+
+```MYSQL
+SELECT 欄位_1, 欄位_2....
+FROM 資料表名稱
+WHERE 條件敘述(欄位 判斷式 數值)
+```
+
+判斷式:
+
+1. 等於: =
+2. 大於: >
+3. 小於: <
+4. 不等於: <>
+5. 大於等於: >=
+6. 小於等於: <=
+7. 集合: IN
+8. (Not)BETWEEN A and B、IS (Not) Null
+
+範例:
+
+```mysql
+SELECT NAME, TEL, ADDRESS
+FROM Students
+WHERE SEX="女";
+```
+
